@@ -20,7 +20,7 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class TopoComponent implements OnInit {
-
+    logo_title: String = "Aprendendo Inglês"
   constructor() { }
 
   ngOnInit() { // ciclo de vida angular 

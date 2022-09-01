@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tentativas.component.css']
 })
 export class TentativasComponent implements OnInit {
-
+  CoracaoVazio: String = "../../assets/coracao_vazio.png"
+  CoracaoCheio: String = "../../assets/coracao_cheio.png"
   constructor() { }
 
   ngOnInit() {
