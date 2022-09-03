@@ -1,5 +1,4 @@
-import { Component,OnInit } from '@angular/core';
-import { Coracao } from 'app/Shared/coracao.model';
+import { Component,EventEmitter,OnInit, Output} from '@angular/core';  
 
 import { Frases } from 'app/Shared/frases.model'; 
 import { FRASES } from './frases-mock';
@@ -9,20 +8,20 @@ import { FRASES } from './frases-mock';
   templateUrl: './painel.component.html',
   styleUrls: ['./painel.component.css']
 })
-export class PainelComponent implements OnInit {
+export class PainelComponent implements OnInit{
         frases:Frases[] = FRASES
         getResposta: String | undefined 
         instrucao: String = "Traduza a Frase:"
-        
+        // ------------------------------------
         rodada: number = 0
         rodadaFrase: Frases | undefined
-        rodadasfeitas: Number[] | undefined
-
+        acertos: number = 0
+        //-------------------------------------------
         progresso: number = 0;
+        // --------------------------
+        tentativas: number = 3
 
-        coracoes:Coracao[] = [
-          new Coracao(true), new Coracao(true), new Coracao(true)
-        ]
+        @Output() finalizandoJogo: EventEmitter<String> = new EventEmitter()
 
   constructor() { 
     this.reiniciarRodada()
@@ -36,18 +35,32 @@ export class PainelComponent implements OnInit {
 
    // if (this.getResposta == this.rodadaFrase.fraseEng) { }
    if (this.getResposta == this.rodadaFrase.frasePTBR) { 
+    this.acertos ++
     //console.log(this.getResposta)
     //console.log(this.rodadaFrase.frasePTBR)
+    if (this.acertos > 3 && this.acertos < 5) {
+      this.finalizandoJogo.emit('vitoria')
+    }
+    
+    console.log(this.acertos)
     this.reiniciarRodada()
     this.progresso += ( 100 / this.frases.length)
+
+    
     
    } else {
-      for ( let coracao of this.coracoes) {
+    this.tentativas--
+
+    if (this.tentativas === -1) {
+      this.finalizandoJogo.emit('derrota')
+    }
+      /* for ( let coracao of this.coracoes) {
           if ( coracao.cheio == true) {
               coracao.cheio = false
               break
           }
-      }  
+      }  */ 
+
    }
    
   }
@@ -64,4 +77,5 @@ export class PainelComponent implements OnInit {
         
   
   ngOnInit() {}
+
   }

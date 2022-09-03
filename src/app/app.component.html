@@ -1,3 +1,30 @@
 <app-topo></app-topo>
-<app-painel></app-painel>
+<div *ngIf="finalizandoAplicacao; else fimDeAplicacao">
+    <app-painel (finalizandoJogo) = "game($event)"></app-painel>
+</div>
 
+<ng-template #fimDeAplicacao>
+    <div class="container">
+        <div *ngIf="resultadoAplicacao === 'vitoria'" style="margin-top:50px;" class="row">
+            <div class="alert alert-light">
+                <h3 style="color: green;">Parabéns! Continue buscando a evolução no inglês! </h3>
+            </div>
+     </div>
+        <div *ngIf="resultadoAplicacao === 'derrota'" class="row">
+            <div class="alert alert-light">
+                <h3 style="color: red;">Fim de jogo! Infelizmente, você perdeu! </h3>
+            </div>
+        </div>
+        <button class="btn btn-warning" (click)="reiniciarAplicacao()">Reiniciar Game</button>
+    </div>
+</ng-template>
+
+  <!-- 
+<ng-template #fimdaAplicacaoDerrota>
+    <div class="row">
+        <div class="col p-2">
+            <h3 style="color: red">Fim de jogo! Infelizmente, você perdeu! </h3>
+        </div>
+    </div>
+</ng-template>
+    -->
