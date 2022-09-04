@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './app.component.html'
 })
 
 export class AppComponent {
@@ -11,7 +9,6 @@ export class AppComponent {
       resultadoAplicacao: String | undefined
 
     public game(x: String): void {
-        console.log(x)
         this.finalizandoAplicacao = false
         this.resultadoAplicacao = x
     }

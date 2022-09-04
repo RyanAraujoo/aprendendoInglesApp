@@ -1,4 +1,5 @@
 <app-topo></app-topo>
+
 <div *ngIf="finalizandoAplicacao; else fimDeAplicacao">
     <app-painel (finalizandoJogo) = "game($event)"></app-painel>
 </div>
@@ -18,13 +19,3 @@
         <button class="btn btn-warning" (click)="reiniciarAplicacao()">Reiniciar Game</button>
     </div>
 </ng-template>
-
-  <!-- 
-<ng-template #fimdaAplicacaoDerrota>
-    <div class="row">
-        <div class="col p-2">
-            <h3 style="color: red">Fim de jogo! Infelizmente, você perdeu! </h3>
-        </div>
-    </div>
-</ng-template>
-    -->
