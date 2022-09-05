@@ -18,6 +18,7 @@ webpackEmptyContext.id = "./src async recursive";
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Coracao; });
+<<<<<<< HEAD
 var Coracao = (function () {
     function Coracao(cheio, urlCoracaoCheio, urlCoracaoVazio) {
         if (cheio === void 0) { cheio = true; }
@@ -38,6 +39,28 @@ var Coracao = (function () {
     return Coracao;
 }());
 
+=======
+var Coracao = (function () {
+    function Coracao(cheio, urlCoracaoCheio, urlCoracaoVazio) {
+        if (cheio === void 0) { cheio = true; }
+        if (urlCoracaoCheio === void 0) { urlCoracaoCheio = "../../assets/coracao_cheio.png"; }
+        if (urlCoracaoVazio === void 0) { urlCoracaoVazio = "../../assets/coracao_vazio.png"; }
+        this.cheio = cheio;
+        this.urlCoracaoCheio = urlCoracaoCheio;
+        this.urlCoracaoVazio = urlCoracaoVazio;
+    }
+    Coracao.prototype.definirCoracao = function () {
+        if (this.cheio) {
+            return this.urlCoracaoCheio;
+        }
+        else {
+            return this.urlCoracaoVazio;
+        }
+    };
+    return Coracao;
+}());
+
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=coracao.model.js.map
 
 /***/ }),
@@ -55,6 +78,7 @@ module.exports = "<app-topo></app-topo>\n\n<div *ngIf=\"finalizandoAplicacao; el
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+<<<<<<< HEAD
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -83,6 +107,36 @@ AppComponent = __decorate([
     })
 ], AppComponent);
 
+=======
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AppComponent = (function () {
+    function AppComponent() {
+        this.finalizandoAplicacao = true;
+    }
+    AppComponent.prototype.game = function (x) {
+        this.finalizandoAplicacao = false;
+        this.resultadoAplicacao = x;
+    };
+    AppComponent.prototype.reiniciarAplicacao = function () {
+        this.finalizandoAplicacao = true;
+        this.resultadoAplicacao = undefined;
+    };
+    return AppComponent;
+}());
+AppComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
+        selector: 'app-root',
+        template: __webpack_require__("./src/app/app.component.html")
+    })
+], AppComponent);
+
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
@@ -99,6 +153,7 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tentativas_tentativas_component__ = __webpack_require__("./src/app/tentativas/tentativas.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__progresso_progresso_component__ = __webpack_require__("./src/app/progresso/progresso.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+<<<<<<< HEAD
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -134,6 +189,43 @@ AppModule = __decorate([
     })
 ], AppModule);
 
+=======
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_3__topo_topo_component__["a" /* TopoComponent */],
+            __WEBPACK_IMPORTED_MODULE_4__painel_painel_component__["a" /* PainelComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__tentativas_tentativas_component__["a" /* TentativasComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__progresso_progresso_component__["a" /* ProgressoComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */]
+        ],
+        providers: [],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
+    })
+], AppModule);
+
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
@@ -143,6 +235,7 @@ AppModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FRASES; });
+<<<<<<< HEAD
 var FRASES = [
     { fraseEng: "Eu liked to Londres!", frasePTBR: "Eu gostei de Londres!" },
     { fraseEng: "How Are You?", frasePTBR: "Como você está?" },
@@ -153,6 +246,18 @@ var FRASES = [
     { fraseEng: "Nice to meet you!", frasePTBR: "Prazer em te conhecer" },
     { fraseEng: "What time is it?", frasePTBR: "Que horas são?" }
 ];
+=======
+var FRASES = [
+    { fraseEng: "Eu liked to Londres!", frasePTBR: "Eu gostei de Londres!" },
+    { fraseEng: "How Are You?", frasePTBR: "Como você está?" },
+    { fraseEng: "I am Ryan", frasePTBR: "Eu sou Ryan" },
+    { fraseEng: "He not understand english", frasePTBR: "Ele não entende inglês" },
+    { fraseEng: "Hi! My name is", frasePTBR: "Olá, meu nome é." },
+    { fraseEng: "I am fine, and you? ", frasePTBR: "Eu estou bem, e você?" },
+    { fraseEng: "Nice to meet you!", frasePTBR: "Prazer em te conhecer" },
+    { fraseEng: "What time is it?", frasePTBR: "Que horas são?" }
+];
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=frases-mock.js.map
 
 /***/ }),
@@ -171,6 +276,7 @@ module.exports = "<div class=\"container mg-4 p-2\">\n  <div class=\"row\">\n   
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__frases_mock__ = __webpack_require__("./src/app/painel/frases-mock.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PainelComponent; });
+<<<<<<< HEAD
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -246,6 +352,83 @@ PainelComponent = __decorate([
 ], PainelComponent);
 
 var _a;
+=======
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PainelComponent = (function () {
+    function PainelComponent() {
+        this.frases = __WEBPACK_IMPORTED_MODULE_1__frases_mock__["a" /* FRASES */];
+        this.instrucao = "Traduza a Frase:";
+        this.random = 0;
+        this.randomFeitos = [];
+        this.acertos = 0;
+        //-------------------------------------------
+        this.progresso = 0;
+        // --------------------------
+        this.tentativas = 3;
+        this.finalizandoJogo = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]();
+        this.reiniciarRodada();
+    }
+    PainelComponent.prototype.pegarResposta = function (x) {
+        this.getResposta = x.target.value;
+    };
+    PainelComponent.prototype.resposta = function () {
+        if (this.getResposta == this.rodadaFrase.frasePTBR) {
+            this.acertos++;
+            if (this.acertos == 4) {
+                this.finalizandoJogo.emit('vitoria');
+            }
+            this.reiniciarRodada();
+            this.progresso += (100 / this.frases.length);
+        }
+        else {
+            this.tentativas--;
+            if (this.tentativas === -1) {
+                this.finalizandoJogo.emit('derrota');
+            }
+        }
+    };
+    PainelComponent.prototype.reiniciarRodada = function () {
+        this.random = Math.floor(this.frases.length * Math.random());
+        this.verificarRepeticao();
+        this.rodadaFrase = this.frases[this.random];
+        this.getResposta = '';
+    };
+    PainelComponent.prototype.verificarRepeticao = function () {
+        for (var _i = 0, _a = this.randomFeitos; _i < _a.length; _i++) {
+            var random = _a[_i];
+            if (random == this.random) {
+                this.random = Math.floor(this.frases.length * Math.random());
+                break;
+            }
+        }
+        this.randomFeitos.push(this.random);
+    };
+    return PainelComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Output */])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* EventEmitter */]) === "function" && _a || Object)
+], PainelComponent.prototype, "finalizandoJogo", void 0);
+PainelComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
+        selector: 'app-painel',
+        template: __webpack_require__("./src/app/painel/painel.component.html")
+    }),
+    __metadata("design:paramtypes", [])
+], PainelComponent);
+
+var _a;
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=painel.component.js.map
 
 /***/ }),
@@ -263,6 +446,7 @@ module.exports = "<div class=\"progress m-4\">\n  <div class=\"progress-bar w-{{
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProgressoComponent; });
+<<<<<<< HEAD
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -290,6 +474,35 @@ ProgressoComponent = __decorate([
     })
 ], ProgressoComponent);
 
+=======
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ProgressoComponent = (function () {
+    function ProgressoComponent() {
+        this.progresso = 0;
+    }
+    return ProgressoComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])("progressobyprogresso"),
+    __metadata("design:type", Number)
+], ProgressoComponent.prototype, "progresso", void 0);
+ProgressoComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
+        selector: 'app-progresso',
+        template: __webpack_require__("./src/app/progresso/progresso.component.html")
+    })
+], ProgressoComponent);
+
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=progresso.component.js.map
 
 /***/ }),
@@ -308,6 +521,7 @@ module.exports = "<img *ngFor=\"let coracao of coracoes\" [src]=\"coracao.defini
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_Shared_coracao_model__ = __webpack_require__("./src/app/Shared/coracao.model.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TentativasComponent; });
+<<<<<<< HEAD
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -345,6 +559,45 @@ TentativasComponent = __decorate([
     })
 ], TentativasComponent);
 
+=======
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TentativasComponent = (function () {
+    function TentativasComponent() {
+        this.coracoes = [
+            new __WEBPACK_IMPORTED_MODULE_1_app_Shared_coracao_model__["a" /* Coracao */](true), new __WEBPACK_IMPORTED_MODULE_1_app_Shared_coracao_model__["a" /* Coracao */](true), new __WEBPACK_IMPORTED_MODULE_1_app_Shared_coracao_model__["a" /* Coracao */](true)
+        ];
+        this.tentativas = 3;
+    }
+    TentativasComponent.prototype.ngOnChanges = function () {
+        if (this.tentativas !== this.coracoes.length) {
+            var indice = this.coracoes.length - this.tentativas - 1;
+            this.coracoes[indice].cheio = false;
+        }
+    };
+    return TentativasComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Input */])(),
+    __metadata("design:type", Number)
+], TentativasComponent.prototype, "tentativas", void 0);
+TentativasComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
+        selector: 'app-tentativas',
+        template: __webpack_require__("./src/app/tentativas/tentativas.component.html")
+    })
+], TentativasComponent);
+
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=tentativas.component.js.map
 
 /***/ }),
@@ -362,6 +615,7 @@ module.exports = "<!-- As a link -->\n<nav class=\"navbar  bg-primary\" style=\"
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TopoComponent; });
+<<<<<<< HEAD
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -382,6 +636,28 @@ TopoComponent = __decorate([
     })
 ], TopoComponent);
 
+=======
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var TopoComponent = (function () {
+    function TopoComponent() {
+        this.logo_title = "Aprendendo Inglês";
+    }
+    return TopoComponent;
+}());
+TopoComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_0" /* Component */])({
+        selector: 'app-topo',
+        template: __webpack_require__("./src/app/topo/topo.component.html")
+    })
+], TopoComponent);
+
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=topo.component.js.map
 
 /***/ }),
@@ -391,6 +667,7 @@ TopoComponent = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+<<<<<<< HEAD
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
@@ -399,6 +676,16 @@ TopoComponent = __decorate([
 var environment = {
     production: false
 };
+=======
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
+// The file contents for the current environment will overwrite these during build.
+var environment = {
+    production: false
+};
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=environment.js.map
 
 /***/ }),
@@ -412,6 +699,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
+<<<<<<< HEAD
 
 
 
@@ -420,6 +708,16 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+=======
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* enableProdMode */])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
+>>>>>>> b73efd7d5c8b03eeb3d4cba6ee49405b85632a26
 //# sourceMappingURL=main.js.map
 
 /***/ }),
