@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges} from '@angular/core';
-import { Coracao } from 'app/Shared/coracao.model';
+import { Coracao } from 'app/shared/coracao.model';
 @Component({
   selector: 'app-tentativas',
   templateUrl: './tentativas.component.html'

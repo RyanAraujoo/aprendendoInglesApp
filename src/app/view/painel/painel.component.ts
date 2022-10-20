@@ -1,7 +1,7 @@
 import { Component,EventEmitter,Output} from '@angular/core';
 
-import { Frases } from 'app/Shared/frases.model';
-import { FRASES } from '../../Shared/frases-mock';
+import { Frases } from 'app/shared/frases.model';
+import { FRASES } from '../../shared/frases-mock';
 
 @Component({
   selector: 'app-painel',
