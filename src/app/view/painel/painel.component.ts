@@ -1,7 +1,7 @@
-import { Component,EventEmitter,Output} from '@angular/core';  
+import { Component,EventEmitter,Output} from '@angular/core';
 
-import { Frases } from 'app/Shared/frases.model'; 
-import { FRASES } from './frases-mock';
+import { Frases } from 'app/Shared/frases.model';
+import { FRASES } from '../../Shared/frases-mock';
 
 @Component({
   selector: 'app-painel',
@@ -10,9 +10,9 @@ import { FRASES } from './frases-mock';
 
 export class PainelComponent {
         frases:Frases[] = FRASES
-        getResposta: String | undefined 
+        getResposta: String | undefined
         instrucao: String = "Traduza a Frase:"
-        
+
         random: number = 0
         randomFeitos: Array<number> = []
         rodadaFrase: Frases | undefined
@@ -24,7 +24,7 @@ export class PainelComponent {
 
         @Output() finalizandoJogo: EventEmitter<String> = new EventEmitter()
 
-  constructor() { 
+  constructor() {
     this.reiniciarRodada()
   }
 
@@ -34,16 +34,16 @@ export class PainelComponent {
 
   resposta (): void {
 
-   if (this.getResposta == this.rodadaFrase.frasePTBR) { 
+   if (this.getResposta == this.rodadaFrase.frasePTBR) {
     this.acertos ++
 
     if (this.acertos == 4) {
       this.finalizandoJogo.emit('vitoria')
     }
-    
+
     this.reiniciarRodada()
     this.progresso += ( 100 / this.frases.length)
-    
+
    } else {
     this.tentativas--
 
@@ -51,7 +51,7 @@ export class PainelComponent {
       this.finalizandoJogo.emit('derrota')
     }
    }
-   
+
   }
 
    reiniciarRodada(): void {
@@ -70,6 +70,6 @@ export class PainelComponent {
       }
     this.randomFeitos.push(this.random)
    }
-  } 
+  }
 
 
