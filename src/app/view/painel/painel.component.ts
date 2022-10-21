@@ -22,6 +22,7 @@ export class PainelComponent {
         // --------------------------
         tentativas: number = 3
 
+
         @Output() finalizandoJogo: EventEmitter<String> = new EventEmitter()
 
   constructor() {
@@ -38,11 +39,14 @@ export class PainelComponent {
     this.acertos ++
 
     if (this.acertos == 4) {
-      this.finalizandoJogo.emit('vitoria')
+          setTimeout(() => {
+            this.finalizandoJogo.emit('vitoria')
+              },800)
+
     }
 
     this.reiniciarRodada()
-    this.progresso += ( 100 / this.frases.length)
+    this.progresso += 25
 
    } else {
     this.tentativas--
