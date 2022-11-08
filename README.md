@@ -1,28 +1,75 @@
-# AprendendoInglesApp
+<h1  align="center">PássaroUrbano<img width=40 align="center" src="./src/assets/coracao_cheio.png"></h1>
+<p align="center"><b><i>🛒 &nbsp;Versão 1 da Aplicação</i></b></p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
+<p align="center">
+<img width="100%"  align="left" src="">
+</p>
 
-## Development server
+# 📌 Tópicos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<!--ts-->
 
-## Code scaffolding
+- [Descricao](#-Descricao)
+- [Tecnologias](#-Tecnologias)
+- [Tarefas](#-Features)
+- [Aplicacao](#-Como-Posso-Rodar-a-Aplicacao?)
+<!--te-->
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+# 📄 Descricao
 
-## Build
+> O projeto fornece uma experiência de jogo, obtendo uma visão do quão você consegue traduzir uma frase em inglês. Errou? Acabou de perder uma tentativa. Acertou? Parabéns! Está mais perto de ganhar o jogo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# 🚀 Tecnologias
 
-## Running unit tests
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [TypeScript](https://www.typescriptlang.org)
+- AngularV4
+- [Visual Studio Code](https://code.visualstudio.com/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# 🎯 Features
 
-## Running end-to-end tests
+<pre>
+✔️ Uso de barra de progresso para medir seus acertos
+✔️ Uso de quantidade de corações cheios para definir as tentativas
+✔️ Design Responsivo
+</pre>
+# 📑 Como Posso Rodar a Aplicacao?
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+- É necessário que você baixe os seguintes itens: 
+Obs: Instalando o node, o npm é instalado. Clicando no "NODE" abaixo, você será automaticamente redirecionado ao download.
 
-## Further help
+✔️ [NodeJs + NPM](https://nodejs.org/dist/v4.0.0/)<br>
+obs: Escolher a versão de 32BITS OU 64BITS de acordo com sua máquina.<br>
+✔️ [GIT](https://git-scm.com/download/win) 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+obs: Escolha o Git 32BITS ou 64BITS, conforme sua máquina
+
+- Após fazer a instalação seguindo todos os passos, entre no node e insira o seguinte código: 
+
+✔️ ANGULAR  `npm install -g @angular/cli@4.0.0`
+
+- Agora é hora de clonar a aplicação em sua máquina!
+
+Dentro do prompt de comando do NODE
+
+- Escolha o diretório viável e execute..
+
+`git clone https://github.com/RyanAraujoo/PassaroUrbanoApp`
+
+`cd PassaroUrbanoApp`
+
+`npm install`
+
+ - Neste passo, Todas as exigências da aplicação está sendo baixadas! 
+ 
+ Fácil e Rápido :)
+
+ - Para finalizar, Execute: 
+
+ `npm start`
+
+- Pronto, agora acesse o link `localhost:[PortaQueONodeEstabeleceu]` 
+
+-----------------------------------------------------------------------------
