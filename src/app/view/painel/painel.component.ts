@@ -1,6 +1,6 @@
 import { Component,EventEmitter,Output} from '@angular/core';
 
-import { Frases } from 'app/shared/frases.model';
+import { Frases } from '../../shared/frases.model';
 import { FRASES } from '../../shared/frases-mock';
 
 @Component({
@@ -35,7 +35,7 @@ export class PainelComponent {
 
   resposta (): void {
 
-   if (this.getResposta == this.rodadaFrase.frasePTBR) {
+   if (this.getResposta == this.rodadaFrase?.frasePTBR) {
     this.acertos ++
 
     if (this.acertos == 4) {
