@@ -5,16 +5,16 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-      finalizandoAplicacao: Boolean = true
-      resultadoAplicacao: String | undefined
+     application: boolean = true
+     finishApplication?: boolean
 
-    public game(x: String): void {
-        this.finalizandoAplicacao = false
-        this.resultadoAplicacao = x
+    public resultApplication(eventChild: string): void {
+      eventChild === 'green' ?  this.finishApplication = true :  this.finishApplication = false
+      this.application = false
     }
 
-    public reiniciarAplicacao(): void {
-        this.finalizandoAplicacao = true
-        this.resultadoAplicacao = undefined
+    public restartApplication(): void {
+        this.application = true
+        this.finishApplication = undefined
     }
 }

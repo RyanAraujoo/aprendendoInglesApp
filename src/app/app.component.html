@@ -1,21 +1,21 @@
-<app-topo></app-topo>
+<app-header></app-header>
 
-<div *ngIf="finalizandoAplicacao; else fimDeAplicacao">
-    <app-painel (finalizandoJogo) = "game($event)"></app-painel>
+<div *ngIf="application; else finishOfApp">
+  <app-panel (finishGame)="resultApplication($event)"></app-panel>
 </div>
 
-<ng-template #fimDeAplicacao>
-    <div class="container">
-        <div *ngIf="resultadoAplicacao === 'vitoria'" style="margin-top:50px;" class="row">
-            <div class="alert alert-light">
-                <h3 style="color: green;">Parabéns! Continue buscando a evolução no inglês! </h3>
-            </div>
-     </div>
-        <div *ngIf="resultadoAplicacao === 'derrota'" class="row">
-            <div class="alert alert-light">
-                <h3 style="color: red;">Fim de jogo! Infelizmente, você perdeu! </h3>
-            </div>
-        </div>
-        <button class="btn btn-warning" (click)="reiniciarAplicacao()">Reiniciar Game</button>
+<ng-template #finishOfApp>
+  <div class="container">
+    <div *ngIf="finishApplication === true" style="margin-top:50px;" class="row">
+      <div class="alert alert-light">
+        <h3 style="color: green;">Parabéns! Continue buscando a evolução no inglês! </h3>
+      </div>
     </div>
+    <div *ngIf="finishApplication === false" class="row">
+      <div class="alert alert-light">
+        <h3 style="color: red;">Fim de jogo! Infelizmente, você perdeu! </h3>
+      </div>
+    </div>
+    <button class="btn btn-warning" (click)="restartApplication()">Reiniciar Game</button>
+  </div>
 </ng-template>
