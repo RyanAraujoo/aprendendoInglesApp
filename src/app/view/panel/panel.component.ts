@@ -44,9 +44,11 @@ export class PanelComponent implements OnInit {
     if (this.hits === 4) {
       setTimeout(() => {
         this.finishGame.emit('green')
+        this.phraseControllService.restartGame()
       }, 400);
     } else if (this.attempts === -1) {
       this.finishGame.emit('red')
+      this.phraseControllService.restartGame()
     }
   }
 }

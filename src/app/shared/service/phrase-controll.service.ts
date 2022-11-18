@@ -6,7 +6,8 @@ import { PHRASES } from './../phrase-mock'
   providedIn: 'root',
 })
 export class PhraseControllService {
-  private phrases: Phrase[] = PHRASES;
+
+  private phrases: Phrase[] = PHRASES
 
   get _phrases(): Phrase[] {
     return this.phrases
@@ -18,7 +19,6 @@ export class PhraseControllService {
 
   pushPhrase(): Phrase {
     let phrase = this._phrases.find((val: any, index: number) => {
-      console.log(val)
       if (this.renderPhrase() === index) {
         val.activate = true
         return val
@@ -33,4 +33,11 @@ export class PhraseControllService {
     });
     return phraseIndex;
   }
+
+  restartGame() {
+    this._phrases.map((phraseChild) => {
+        phraseChild.activate = false
+    })
+  }
+
 }
