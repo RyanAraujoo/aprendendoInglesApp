@@ -1,26 +1,36 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
+import { Phrase } from '../phrase.model'
+import { PHRASES } from './../phrase-mock'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PhraseControllService {
-/*
-  restartPhrases() {
-    this.random = Math.floor(this.frases.length * Math.random());
-    this.verificarRepeticao();
-    this.rodadaFrase = this.frases[this.random];
-    this.getResposta = '';
+  private phrases: Phrase[] = PHRASES;
+
+  get _phrases(): Phrase[] {
+    return this.phrases
   }
 
-  checkRepeat() {
-    for (let random of this.randomFeitos) {
-      if (random == this.random) {
-        this.random = Math.floor(this.frases.length * Math.random());
-        break;
+  set _phrases(valueOriginPhrases: Phrase[]) {
+    this.phrases = valueOriginPhrases
+  }
+
+  pushPhrase(): Phrase {
+    let phrase = this._phrases.find((val: any, index: number) => {
+      console.log(val)
+      if (this.renderPhrase() === index) {
+        val.activate = true
+        return val
       }
-    }
-    this.randomFeitos.push(this.random);
+    });
+    return phrase!
   }
-*/
-}
 
+  private renderPhrase(): number {
+    let phraseIndex = this._phrases.findIndex((phraseChild) => {
+      return phraseChild.activate === false;
+    });
+    return phraseIndex;
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core'
+import { Component, EventEmitter, OnInit, Output } from '@angular/core'
 import { Phrase } from 'src/app/shared/phrase.model'
 import { PhraseControllService } from './../../shared/service/phrase-controll.service'
 
@@ -7,15 +7,18 @@ import { PhraseControllService } from './../../shared/service/phrase-controll.se
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.scss'],
 })
-export class PanelComponent {
+export class PanelComponent implements OnInit {
   phrases: Phrase[] = []
-  getResponse?: string
+  getResponse: string = ''
   rodadaPhrase?: Phrase
   hits: number = 0
   progress: number = 0
   attempts: number = 3
 
   constructor(private phraseControllService: PhraseControllService) {}
+  ngOnInit(): void {
+    this.rodadaPhrase = this.phraseControllService.pushPhrase()
+  }
   @Output() finishGame: EventEmitter<string> = new EventEmitter<string>()
 
   getResponseMethod(x: any): void {
@@ -30,7 +33,8 @@ export class PanelComponent {
     if (this.getResponse === this.rodadaPhrase?.phrasePTBR) {
       this.progress += 25
       this.hits++
-      // this.phraseControllService.restartPhrases()
+      this.rodadaPhrase = this.phraseControllService.pushPhrase()
+      this.getResponse = ''
     } else {
       this.attempts--
     }
@@ -40,7 +44,7 @@ export class PanelComponent {
     if (this.hits === 4) {
       setTimeout(() => {
         this.finishGame.emit('green')
-      }, 800);
+      }, 400);
     } else if (this.attempts === -1) {
       this.finishGame.emit('red')
     }
