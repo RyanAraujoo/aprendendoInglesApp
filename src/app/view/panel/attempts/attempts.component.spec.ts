@@ -1,23 +1,27 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AttempsComponent } from './attempts.component';
+ import { AttemptsComponent } from './attempts.component';
 
 describe('AttempsComponent', () => {
-  let component: AttempsComponent;
-  let fixture: ComponentFixture<AttempsComponent>;
+  let component: AttemptsComponent;
+  let fixture: ComponentFixture<AttemptsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AttempsComponent ]
+      declarations: [ AttemptsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AttempsComponent);
+    fixture = TestBed.createComponent(AttemptsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  fit('should check if attemps is number', () => {
+    expect(component.attempts).not.toBeNaN();
+  })
 });

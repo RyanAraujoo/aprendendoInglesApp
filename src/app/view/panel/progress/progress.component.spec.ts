@@ -17,7 +17,13 @@ describe('ProgressComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  fit('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  fit('should check if progress is a number', () => {
+    const progressVariable = component.progress
+
+    expect(progressVariable).not.toBeNaN()
+  })
 });
