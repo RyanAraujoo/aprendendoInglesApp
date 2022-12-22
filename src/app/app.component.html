@@ -1,4 +1,7 @@
-<app-header></app-header>
+<div tabindex="-1">
+  <app-header></app-header>
+</div>
+
 
 <div *ngIf="application; else finishOfApp">
   <app-panel (finishGame)="resultApplication($event)"></app-panel>
@@ -8,12 +11,12 @@
   <div class="container">
     <div *ngIf="finishApplication === true" style="margin-top:50px;" class="row">
       <div class="alert alert-light">
-        <h3 style="color: green;">Parabéns! Continue buscando a evolução no inglês! </h3>
+        <h3 style="color: green;" tabindex="0">Parabéns! Continue buscando a evolução no inglês! </h3>
       </div>
     </div>
     <div *ngIf="finishApplication === false" class="row">
       <div class="alert alert-light">
-        <h3 style="color: red;">Fim de jogo! Infelizmente, você perdeu! </h3>
+        <h3 style="color: red; " tabindex="0">Fim de jogo! Infelizmente, você perdeu! </h3>
       </div>
     </div>
     <button class="btn btn-warning" (click)="restartApplication()">Reiniciar Game</button>

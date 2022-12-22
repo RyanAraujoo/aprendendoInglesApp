@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ProgressComponent {
   @Input("progressInput") progress: number = 0;
+
+  
 }

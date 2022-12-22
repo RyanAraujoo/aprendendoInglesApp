@@ -1,25 +1,48 @@
 <div class="container mg-4 p-2">
   <div class="row">
     <div class="col-sm-6">
-      <app-progress [progressInput]='progress'></app-progress>
+      <app-progress [progressInput]="progress"></app-progress>
     </div>
     <div class="col-sm-6">
       <div class="d-flex justify-content-end p-2">
-        <app-attempts [attemptsInput]='attempts'></app-attempts>
+        <app-attempts [attemptsInput]="attempts"></app-attempts>
       </div>
     </div>
-
   </div>
   <div class="d-flex flex-column mb-3">
-    <div class="p-2">
-      <h6>Traduza a Frase: </h6>
-      <p>{{rodadaPhrase?.phraseEng}}</p>
+    <div class="p-2" role="groupText">
+      <h6 tabindex="0" role="text">Traduza a Frase:</h6>
+      <p tabindex="0">
+        <span lang="en-US" role="text">{{ rodadaPhrase?.phraseEng }}</span>
+      </p>
       <div class="input-group input-group-lg">
-        <input type="text" class="form-control" [value]="getResponse" (input)="getResponseMethod($event)"
-          aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <input
+          type="text"
+          class="form-control width"
+          [value]="getResponse"
+          name="trasnlation"
+          aria-label="Insira, em Português Brasileiro, a respectiva tradução:  "
+          (input)="getResponseMethod($event)"
+          placeholder="Exemplo: Eu gosto de melancia!"
+        />
       </div>
       <div class="d-flex justify-content-end p-2">
-        <button type="button" (click)="CheckGame()" class="btn btn-primary btn-sm">Verificar</button>
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Verificar
+        </button>
+        <div>
+          <app-modal-yes-no
+            [phrase]="rodadaPhrase"
+            [translationPhrase]="getResponse"
+            (confirm)="CheckGame()"
+          >
+          </app-modal-yes-no>
+        </div>
       </div>
     </div>
   </div>

@@ -9,7 +9,11 @@ export class AppComponent {
      finishApplication?: boolean
 
     public resultApplication(eventChild: string): void {
-      eventChild === 'green' ?  this.finishApplication = true :  this.finishApplication = false
+      if (eventChild === 'green') {
+        this.finishApplication = true
+      } else {
+        this.finishApplication = false
+      }
       this.application = false
     }
 

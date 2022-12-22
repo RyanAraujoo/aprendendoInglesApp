@@ -13,10 +13,6 @@ export class PhraseControllService {
     return this.phrases
   }
 
-  set _phrases(valueOriginPhrases: Phrase[]) {
-    this.phrases = valueOriginPhrases
-  }
-
   pushPhrase(): Phrase {
     let phrase = this._phrases.find((val: any, index: number) => {
       if (this.renderPhrase() === index) {
