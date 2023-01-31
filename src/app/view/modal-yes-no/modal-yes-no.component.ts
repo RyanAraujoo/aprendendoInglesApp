@@ -10,7 +10,7 @@ export class ModalYesNoComponent implements OnInit {
   @Input() phrase?: Phrase;
   originPhrase?: string = '';
  @Input() translationPhrase: string = '';
- @Output() confirm: EventEmitter<any> = new EventEmitter<any>();
+ @Output() confirm: EventEmitter<void> = new EventEmitter<void>();
 
  ngOnInit(): void {
     this.originPhrase = this.phrase?.phraseEng
